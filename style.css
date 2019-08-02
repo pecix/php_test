@@ -40,16 +40,16 @@ th:hover{
     background-color: lightslategray;
 }
 
-tr:hover{
-    background-color: lightslategray;
-}
-
 .col{
     border-bottom: 1px solid black;
 }
 
 .row{
     border-right: 1px solid black;
+}
+
+tr:hover > .row{
+    background-color: lightslategray;
 }
 
 button{
