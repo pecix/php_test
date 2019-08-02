@@ -1,0 +1,96 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 2em;
+}
+
+table {
+    border: 1px solid black;
+    border-spacing: 0px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 0.5em;
+} 
+
+td {
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    background-color: lightgray;
+}
+
+td:hover {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+}
+
+td:hover::after{
+    content: "";
+    position: absolute;
+    background-color: lightslategray;
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: -1;
+}
+
+th:hover{
+    background-color: lightslategray;
+}
+
+tr:hover{
+    background-color: lightslategray;
+}
+
+.col{
+    border-bottom: 1px solid black;
+}
+
+.row{
+    border-right: 1px solid black;
+}
+
+button{
+    width: 7em;
+    height: 2.5em;
+    border: none;
+    outline-style: none;
+    border-radius: 5em;
+    background-color: lightblue;
+    box-shadow: 2px 2px 5px  gray;
+    transition-duration: 500ms;
+}
+
+button:hover{
+    transform: scale(1.05);
+    transition-duration: 500ms;
+}
+
+.redbutton:hover{
+    background-color: lightcoral;
+}
+
+.greenbutton:hover{
+    background-color: lightgreen;
+}
+
+.yellowbutton:hover{
+    background-color: lightsalmon;
+}
+
+fieldset{
+    display: inline-block;
+    border-radius: 1em;
+    width: auto;
+    background-color: #ebebeb;
+}
+
+input{
+    border: 1px solid gray;
+    text-align: center;
+    outline: none;
+    border-radius: 1em;
+    height: 2em;
+}
