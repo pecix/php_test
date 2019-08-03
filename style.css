@@ -10,7 +10,7 @@ table {
     display: inline-block;
     overflow: hidden;
     border-radius: 0.5em;
-} 
+}
 
 td {
     text-align: center;
@@ -25,7 +25,7 @@ td:hover {
     font-weight: bolder;
 }
 
-td:hover::after{
+td:hover::after {
     content: "";
     position: absolute;
     background-color: lightslategray;
@@ -36,58 +36,58 @@ td:hover::after{
     z-index: -1;
 }
 
-th:hover{
+th:hover {
     background-color: lightslategray;
 }
 
-.col{
+.col {
     border-bottom: 1px solid black;
 }
 
-.row{
+.row {
     border-right: 1px solid black;
 }
 
-tr:hover > .row{
+tr:hover>.row {
     background-color: lightslategray;
 }
 
-button{
+button {
     width: 7em;
     height: 2.5em;
     border: none;
     outline-style: none;
     border-radius: 5em;
     background-color: lightblue;
-    box-shadow: 2px 2px 5px  gray;
+    box-shadow: 2px 2px 5px gray;
     transition-duration: 500ms;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.05);
     transition-duration: 500ms;
 }
 
-.redbutton:hover{
+.redbutton:hover {
     background-color: lightcoral;
 }
 
-.greenbutton:hover{
+.greenbutton:hover {
     background-color: lightgreen;
 }
 
-.yellowbutton:hover{
+.yellowbutton:hover {
     background-color: lightsalmon;
 }
 
-fieldset{
+fieldset {
     display: inline-block;
     border-radius: 1em;
     width: auto;
     background-color: #ebebeb;
 }
 
-input{
+input {
     border: 1px solid gray;
     text-align: center;
     outline: none;
