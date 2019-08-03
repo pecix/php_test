@@ -11,7 +11,7 @@
 <body>
     <?php
         //ROZMIAR TABELI
-        if($_SESSION["pass"] == "xxxxxx" || $_POST["pass" == "xxxxxx"]){
+        if($_SESSION["created"] == 1 && time() - $_SESSION["time"] < 300){
             echo "<fieldset>\n";
             echo "<legend>Panel</legend>\n";
             echo "<form method=\"POST\">\n";
@@ -25,7 +25,8 @@
             echo "</form>\n";
             echo "</fieldset>\n";
             breakLine(3);
-        }elseif($_SESSION["pass"] != "xxxxxx"){
+        }else{
+            session_destroy();
             header("Location: index.php");
         }
         
