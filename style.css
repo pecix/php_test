@@ -94,3 +94,9 @@ input {
     border-radius: 1em;
     height: 2em;
 }
+
+.alert {
+    color: rgb(255, 100, 100);
+    font-size: small;
+    letter-spacing: 4px;
+}

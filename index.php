@@ -1,6 +1,7 @@
 <?php
     session_start();
     include 'functions.php';
+    check_session();
 ?>
 <html>
 <head>
@@ -10,19 +11,25 @@
 </head>
 <body>
     <?php
-        // LOGOWANIE
-        if(!isset($_SESSION["pass"]) || $_SESSION["created"] != 1){
-            echo "<form method=\"POST\" action=\"login.php\">\n<fieldset>\n";
-            echo "<legend>Enter password:</legend>\n<label><input name=\"pass\" type=\"password\" value=\"\"></label>\n";
-            nbsp(2);
-            echo "<button class=\"greenbutton\" type=\"submit\">Authorize</button>\n";
-            echo "</fieldset>\n</form>\n";
-        }elseif($_SESSION["created"] == 1){
-            header("Location: content.php");
+
+        if(isset($_SESSION["created"]) && isset($_SESSION["time"])){
+            if($_SESSION["created"] == 1 && time() - $_SESSION["time"] < get_session_time()){
+                header("Location: content.php");
+            }
         }
+
+        echo "<form method=\"POST\" action=\"login.php\">\n<fieldset>\n";
+        echo "<legend>Enter password:</legend>\n<label><input name=\"pass\" type=\"password\" value=\"\"></label>\n";
+        nbsp(2);
+        echo "<button class=\"greenbutton\" type=\"submit\">Authorize</button>\n";
+        echo "</fieldset>\n</form>\n";
         
         if(isset($_GET["pass"]) && $_GET["pass"] == "bad"){
-            echo "Podałeś złe hasło. Spróbuj jeszcze raz.";
+            get_alert("podałeś złe hasło");
+        }elseif(isset($_GET["session"]) && $_GET["session"] == "out"){
+            get_alert("sesja wygasła");
+        }elseif(isset($_GET["logout"]) && $_GET["logout"] == "true"){
+            get_alert("Zostałeś wylogowany");
         }
     ?>
 </body>

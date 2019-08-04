@@ -1,6 +1,7 @@
 <?php
     session_start();
     include 'functions.php';
+    check_session();
 ?>
 <html>
 <head>
@@ -10,10 +11,8 @@
 </head>
 <body>
     <?php
-        //ROZMIAR TABELI
-        if($_SESSION["created"] == 1 && time() - $_SESSION["time"] < 300){
             echo "<fieldset>\n";
-            echo "<legend>Panel</legend>\n";
+            echo "<legend>Panel administracyjny:</legend>\n";
             echo "<form method=\"POST\">\n";
             echo "<label>Wiersze: &nbsp<input name=\"wiersze\" type=\"text\" value=\"\"></label>\n";
             breakLine(2);
@@ -25,26 +24,13 @@
             echo "</form>\n";
             echo "</fieldset>\n";
             breakLine(3);
-        }else{
-            session_destroy();
-            header("Location: index.php");
-        }
         
         if(isset($_POST["wiersze"]) && isset($_POST["kolumny"])){
-            $wiersze = $_POST["wiersze"];
-            $kolumny = $_POST["kolumny"];
-            echo "<h1>Tabliczka mnożenia $wiersze x $kolumny</h1>";
-            tabliczkaMnozenia($wiersze, $kolumny);
+            tabliczkaMnozenia($_POST["wiersze"], $_POST["kolumny"]);
         }else{
             echo "wpisz rozmiar tabeli";
             breakLine();
         }
-        // echo " - Post".var_dump($_POST)."<br />";
-        // echo " - Session".var_dump($_SESSION)."<br />";
-        // echo " - Wiersze".var_dump($wiersze)."<br />";
-        // echo " - Kolumny".var_dump($kolumny)."<br />";
-        
-
     ?>
 </body>
 </html>
