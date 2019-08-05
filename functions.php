@@ -51,6 +51,7 @@
                 $_SESSION["time"] = time();
             }
             if($_SESSION["created"] == 1 && time() - $_SESSION["time"] > get_session_time()){
+                session_unset();
                 session_destroy();
                 header("Location: index.php?session=out");
             }
@@ -59,5 +60,13 @@
 
     function get_alert($message){
         echo "<span class=\"alert\">".$message."</span>\n";
+    }
+
+    function redirect_to_content(){
+        if(isset($_SESSION["created"]) && isset($_SESSION["time"])){
+            if($_SESSION["created"] == 1 && time() - $_SESSION["time"] < get_session_time()){
+                header("Location: content.php");
+            }
+        }
     }
 ?>
