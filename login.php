@@ -1,8 +1,8 @@
 <?php
 session_start();
-include 'config.php';
+include 'functions.php';
 
-if ($_POST["pass"] == get_password()) {
+if (verify_password($_POST["pass"])) {
     $_SESSION["created"] = 1;
     $_SESSION["time"] = time();
     header("Location: content.php");

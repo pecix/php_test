@@ -47,10 +47,10 @@ function tabliczkaMnozenia($wiersze, $kolumny)
 function check_session()
 {
     if (isset($_SESSION["created"]) && isset($_SESSION["time"])) {
-        if ($_SESSION["created"] == 1 && time() - $_SESSION["time"] < get_session_time()) {
+        if ($_SESSION["created"] == 1 && time() - $_SESSION["time"] < SESSION_TIME) {
             $_SESSION["time"] = time();
         }
-        if ($_SESSION["created"] == 1 && time() - $_SESSION["time"] > get_session_time()) {
+        if ($_SESSION["created"] == 1 && time() - $_SESSION["time"] > SESSION_TIME) {
             session_unset();
             session_destroy();
             header("Location: index.php?session=out");
@@ -66,8 +66,17 @@ function get_alert($message)
 function redirect_to_content()
 {
     if (isset($_SESSION["created"]) && isset($_SESSION["time"])) {
-        if ($_SESSION["created"] == 1 && time() - $_SESSION["time"] < get_session_time()) {
+        if ($_SESSION["created"] == 1 && time() - $_SESSION["time"] < SESSION_TIME) {
             header("Location: content.php");
         }
+    }
+}
+
+function verify_password($password)
+{
+    if ($password == PASSWORD) {
+        return 1;
+    } else {
+        return 0;
     }
 }
