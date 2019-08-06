@@ -21,7 +21,7 @@ function nbsp($value = 1)
 function tabliczkaMnozenia($wiersze, $kolumny)
 {
     if ($wiersze < 1 || $kolumny < 1) {
-        get_alert("Podałeś złe dane ");
+        get_alert("podałeś złe dane ");
     } else {
         echo "<h1>Tabliczka mnożenia $wiersze x $kolumny</h1>";
         echo "<table>\n";

@@ -27,7 +27,7 @@ redirect_to_content();
     } elseif (isset($_GET["session"]) && $_GET["session"] == "out") {
         get_alert("sesja wygasła");
     } elseif (isset($_GET["logout"]) && $_GET["logout"] == "true") {
-        get_alert("Zostałeś wylogowany");
+        get_alert("zostałeś wylogowany");
     }
     ?>
 </body>

@@ -15,7 +15,7 @@ check_session();
     <?php
     echo "<fieldset>\n";
     echo "<legend>Panel administracyjny:</legend>\n";
-    echo "<form method=\"POST\">\n";
+    echo "<form method=\"POST\" class=\"contentform\">\n";
     echo "<label>Wiersze: &nbsp<input name=\"wiersze\" type=\"text\" value=\"\" /></label>\n";
     breakLine(2);
     echo "<label>Kolumny: <input name=\"kolumny\" type=\"text\" value=\"\" /></label>\n";
