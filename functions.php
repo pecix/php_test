@@ -60,7 +60,7 @@ function check_session()
 
 function get_alert($message)
 {
-    echo "<div class=\"alert\">&nbsp" . $message . " </div>\n";
+    echo "<span class=\"alert\">&nbsp" . $message . " </span>\n";
 }
 
 function redirect_to_content()
