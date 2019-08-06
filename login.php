@@ -7,4 +7,3 @@
     }else{
         header("Location: index.php?pass=bad");
     }
-?>
