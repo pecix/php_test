@@ -16,16 +16,16 @@ check_session();
     echo "<fieldset>\n";
     echo "<legend>Panel administracyjny:</legend>\n";
     echo "<form method=\"POST\">\n";
-    echo "<label>Wiersze: &nbsp<input name=\"wiersze\" type=\"text\" value=\"\"></label>\n";
+    echo "<label>Wiersze: &nbsp<input name=\"wiersze\" type=\"text\" value=\"\" /></label>\n";
     breakLine(2);
-    echo "<label>Kolumny: <input name=\"kolumny\" type=\"text\" value=\"\"></label>\n";
+    echo "<label>Kolumny: <input name=\"kolumny\" type=\"text\" value=\"\" /></label>\n";
     breakLine(2);
-    echo "<button class=\"greenbutton\" type=\"submit\">Pokaż</button>\n";
+    echo "<button class=\"greenbutton\" type=\"submit\">Show</button>\n";
     nbsp(2);
     echo "<a href=\"logout.php\"><button class=\"redbutton\" type=\"button\">Logout</button></a>\n";
     echo "</form>\n";
     echo "</fieldset>\n";
-    breakLine(3);
+    breakLine(2);
 
     if (isset($_POST["wiersze"]) && isset($_POST["kolumny"])) {
         tabliczkaMnozenia($_POST["wiersze"], $_POST["kolumny"]);

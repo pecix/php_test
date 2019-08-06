@@ -96,7 +96,21 @@ input {
 }
 
 .alert {
-    color: rgb(255, 100, 100);
+    display: inline-block;
+    color: white;
     font-size: small;
     letter-spacing: 4px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(255, 100, 100, 0.7); 
+    box-shadow: 2px 2px 5px gray;
+    animation: notify 3s;
+    opacity: 0;
+}
+
+@keyframes notify{
+    0%{transform: scale(0)}
+    25%{transform: scale(1); opacity: 1;}
+    75%{transform: scale(1); opacity: 1;}
+    100%{transform: scale(0)}
 }

@@ -16,7 +16,7 @@ redirect_to_content();
     <?php
 
     echo "<form method=\"POST\" action=\"login.php\">\n<fieldset>\n";
-    echo "<legend>Enter password:</legend>\n<label><input name=\"pass\" type=\"password\" value=\"\"></label>\n";
+    echo "<legend>Enter password:</legend>\n<label><input name=\"pass\" type=\"password\" value=\"\" /></label>\n";
     breakLine(2);
     echo "<button class=\"greenbutton\" type=\"submit\">Authorize</button>\n";
     nbsp(2);
