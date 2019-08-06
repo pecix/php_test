@@ -77,7 +77,7 @@ button:hover {
 }
 
 .yellowbutton:hover {
-    background-color: lightsalmon;
+    background-color: rgb(241, 236, 156);
 }
 
 fieldset {

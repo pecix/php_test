@@ -17,8 +17,10 @@ redirect_to_content();
 
     echo "<form method=\"POST\" action=\"login.php\">\n<fieldset>\n";
     echo "<legend>Enter password:</legend>\n<label><input name=\"pass\" type=\"password\" value=\"\"></label>\n";
-    nbsp(2);
+    breakLine(2);
     echo "<button class=\"greenbutton\" type=\"submit\">Authorize</button>\n";
+    nbsp(2);
+    echo "<a href=\"index.php\"><button class=\"yellowbutton\" type=\"button\">Refresh</button></a>\n";
     echo "</fieldset>\n</form>\n";
 
     // MESSAGE

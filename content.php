@@ -29,9 +29,6 @@ check_session();
 
     if (isset($_POST["wiersze"]) && isset($_POST["kolumny"])) {
         tabliczkaMnozenia($_POST["wiersze"], $_POST["kolumny"]);
-    } else {
-        echo "wpisz rozmiar tabeli";
-        breakLine();
     }
     ?>
 </body>
