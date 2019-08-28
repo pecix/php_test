@@ -130,3 +130,11 @@ input {
         transform: translate(0, -15px)
     }
 }
+
+.record {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
