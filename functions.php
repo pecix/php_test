@@ -41,6 +41,7 @@ function tabliczkaMnozenia($wiersze, $kolumny)
             echo "</tr>\n";
         }
         echo "<table>\n";
+        breakLine(2);
     }
 }
 
