@@ -86,6 +86,7 @@ fieldset {
     width: auto;
     background-color: #ebebeb;
     box-shadow: 2px 2px 5px gray;
+    margin-bottom: 15px;
 }
 
 input {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'functions.php';
+require_once 'functions.php';
 
 if (verify_password($_POST["pass"])) {
     $_SESSION["created"] = 1;

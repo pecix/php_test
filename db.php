@@ -1,8 +1,9 @@
 <?php
+require_once 'config.php';
 
 function showUsers()
 {
-    $db = mysqli_connect("localhost", "root", "", "test") or die(mysqli_connect_error());
+    $db = mysqli_connect(DB_HOST, DB_LOGIN, DB_PASSWORD, DB_TABLE) or die(mysqli_connect_error());
 
     $query = "
     SELECT * FROM users
