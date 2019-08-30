@@ -34,13 +34,14 @@ body {
 .button {
     display: inline-block;
     background-color: lightgrey;
-    border: 1px outset;
+    border: 1px outset lightgrey;
     text-align: center;
     width: 20px;
+    outline-style: none;
 }
 
 .content {
     background-color: lightgray;
-    text-align: justify;
     padding: 10px;
+    text-align: center;
 }

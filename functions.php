@@ -81,3 +81,20 @@ function verify_password($password)
         return 0;
     }
 }
+
+function get_window($title, $content)
+{
+    echo "
+    <div class=\"window\">
+        <div class=\"header\">
+            <div class=\"title\">$title</div>
+            <div class=\"buttons\">
+                <a href=\"logout.php\"><div class=\"button\">x</div></a>
+            </div>
+        </div>
+        <div class=\"content\">
+            $content
+        </div>
+    </div>
+    ";
+}
