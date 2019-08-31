@@ -51,11 +51,11 @@ function check_session()
         if ($_SESSION["created"] == 1 && time() - $_SESSION["time"] < SESSION_TIME) {
             $_SESSION["time"] = time();
         }
-        if ($_SESSION["created"] == 1 && time() - $_SESSION["time"] > SESSION_TIME) {
+        if ($_SESSION["created"] == 0 || time() - $_SESSION["time"] > SESSION_TIME) {
             session_unset();
             session_destroy();
             header("Location: index.php?session=out");
-        }
+        } 
     }
 }
 
@@ -70,6 +70,13 @@ function redirect_to_content()
         if ($_SESSION["created"] == 1 && time() - $_SESSION["time"] < SESSION_TIME) {
             header("Location: content.php");
         }
+    }
+}
+
+function redirect_to_index()
+{
+    if (!isset($_SESSION["created"]) || !isset($_SESSION["time"])) {
+        header("Location: index.php");
     }
 }
 

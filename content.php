@@ -2,17 +2,16 @@
 session_start();
 require_once 'functions.php';
 require_once 'db.php';
+redirect_to_index();
 check_session();
 ?>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <title>Zawartość testowa</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href= "window.css">
 </head>
-
 <body>
     <?php
 
@@ -41,7 +40,6 @@ check_session();
         check_session();
         showUsers();
     }
-
 
     ?>
 </body>

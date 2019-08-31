@@ -11,22 +11,26 @@ function showUsers()
 
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
-    echo "Ilość  rekordów: " . mysqli_num_rows($result) . "<br /><br />\n\n";
+    echo "Ilość  rekordów: " . mysqli_num_rows($result);
+    breakLine(2);
 
     while ($row = mysqli_fetch_assoc($result)) {
-        echo "<div class=\"record\">\n";
-        echo "id: " . $row['id'] . "<br />\n";
-        echo "login " . $row['login'] . "<br />\n";
-        echo "hasło: " . $row['password'] . "<br />\n";
-        echo "opis: " . $row['description'] . "<br />\n";
-        echo "utworzony: " . $row['creation_time'] . "\n";
-        echo "</div>\n\n";
+        echo "
+            <div class=\"record\">
+                id: " . $row['id'] . "<br />
+                login " . $row['login'] . "<br />
+                hasło: " . $row['password'] . "<br />
+                opis: " . $row['description'] . "<br />
+                utworzony: " . $row['creation_time'] . "
+            </div>
+        ";
     }
 
-    // echo "<br /><br />";
+    // breakLine(2);
     // $result = mysqli_query($db, $query) or die(mysqli_error($db));
     // while($row = mysqli_fetch_assoc($result)){
-    //     echo print_r($row)."<br />";
+    //     echo print_r($row);
+    //     breakLine();
     // }
 
     mysqli_close($db);
