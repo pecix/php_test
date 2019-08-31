@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.window {
+    display: inline-block;
+    background-color: green;
+    min-width: 250px;
+    width: 50%;
+    border: 2px outset;
+}
+
+.header {
+    background-image: linear-gradient(to right, #003162, lightblue);
+    border-bottom: 1px outset;
+    padding: 3px;
+}
+
+.title {
+    display: inline-block;
+    width: 49%;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+}
+
+.buttons {
+    display: inline-block;
+    width: 49%;
+    text-align: right;
+}
+
+.button {
+    display: inline-block;
+    background-color: lightgrey;
+    border: 1px outset lightgrey;
+    text-align: center;
+    width: 20px;
+    outline-style: none;
+}
+
+.content {
+    background-color: lightgray;
+    padding: 10px;
+    text-align: center;
+}

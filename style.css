@@ -1,0 +1,146 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 2em;
+}
+
+table {
+    border: 1px solid black;
+    border-spacing: 0px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 0.5em;
+}
+
+td {
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    background-color: lightgray;
+}
+
+td:hover {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+}
+
+td:hover::after {
+    content: "";
+    position: absolute;
+    background-color: lightslategray;
+    left: 0;
+    top: -5000px;
+    height: 10000px;
+    width: 100%;
+    z-index: -1;
+}
+
+th:hover {
+    background-color: lightslategray;
+}
+
+.col {
+    border-bottom: 1px solid black;
+}
+
+.row {
+    border-right: 1px solid black;
+}
+
+tr:hover>.row {
+    background-color: lightslategray;
+}
+
+button {
+    width: 7em;
+    height: 2.5em;
+    border: none;
+    outline-style: none;
+    border-radius: 5em;
+    background-color: lightblue;
+    box-shadow: 2px 2px 5px gray;
+    transition-duration: 500ms;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition-duration: 500ms;
+}
+
+.redbutton:hover {
+    background-color: lightcoral;
+}
+
+.greenbutton:hover {
+    background-color: lightgreen;
+}
+
+.yellowbutton:hover {
+    background-color: rgb(241, 236, 156);
+}
+
+fieldset {
+    display: inline-block;
+    border-radius: 1em;
+    width: auto;
+    background-color: #ebebeb;
+    box-shadow: 2px 2px 5px gray;
+    margin-bottom: 15px;
+}
+
+input {
+    border: 1px solid gray;
+    text-align: center;
+    outline: none;
+    border-radius: 1em;
+    height: 2em;
+    box-shadow: 2px 2px 5px gray;
+    margin-bottom: 10px;
+}
+
+.contentform {
+    margin-block-end: 0;
+}
+
+.alert {
+    display: inline-block;
+    color: white;
+    font-size: small;
+    letter-spacing: 4px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(255, 100, 100, 0.7);
+    box-shadow: 2px 2px 5px gray;
+    animation: notify 3s;
+    opacity: 0;
+}
+
+@keyframes notify {
+    0% {
+        transform: translate(0, -15px)
+    }
+    25% {
+        transform: translate(0, 0px);
+        opacity: 1;
+    }
+    75% {
+        transform: translate(0, 0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, -15px)
+    }
+}
+
+.record {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+form {
+    margin-block-end: 0;
+}
