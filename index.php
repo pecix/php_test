@@ -14,21 +14,13 @@ redirect_to_content();
 <body>
     <?php
 
-    // echo "<form method=\"POST\" action=\"login.php\">\n<fieldset>\n";
-    // echo "<legend>Enter password:</legend>\n<label><input name=\"pass\" type=\"password\" value=\"\" /></label>\n";
-    // nbsp(2);
-    // echo "<button class=\"greenbutton\" type=\"submit\">Authorize</button>\n";
-    // echo "</fieldset>\n</form>\n";
-
-
-    $title = "Logowanie";
     $content = "
         <form method=\"POST\" action=\"login.php\">
         <input name=\"pass\" type=\"password\" value=\"\" /> &nbsp&nbsp
-        <button class=\"greenbutton\" type=\"submit\">Authorize</button>
+        <button class=\"greenbutton\" type=\"submit\">Login</button>
         ";
 
-    get_window($title, $content);
+    get_window_without_logout_button("Logowanie", $content);
     breakLine(2);
 
 

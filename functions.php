@@ -98,3 +98,18 @@ function get_window($title, $content)
     </div>
     ";
 }
+
+function get_window_without_logout_button($title, $content)
+{
+    echo "
+    <div class=\"window\">
+        <div class=\"header\">
+            <div class=\"title\">$title</div>
+            <div class=\"buttons\"></div>
+        </div>
+        <div class=\"content\">
+            $content
+        </div>
+    </div>
+    ";
+}

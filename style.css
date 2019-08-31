@@ -55,6 +55,7 @@ tr:hover>.row {
 button {
     width: 7em;
     height: 2.5em;
+    margin: 0px 5px;
     border: none;
     outline-style: none;
     border-radius: 5em;
